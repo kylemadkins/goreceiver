@@ -20,37 +20,29 @@ package main
 import "fmt"
 
 type Player struct {
-	health    int
-	maxHealth int
-	energy    int
-	maxEnergy int
+	health    uint
+	maxHealth uint
+	energy    uint
+	maxEnergy uint
 	name      string
 }
 
-func (player *Player) setHealth(health int) {
-	h := 0
-	if health < 0 {
-		h = 0
-	} else if health > player.maxHealth {
-		h = player.maxHealth
+func (player *Player) setHealth(health uint) {
+	if health > player.maxHealth {
+		player.health = player.maxHealth
 	} else {
-		h = health
+		player.health = health
 	}
-	player.health = h
-	fmt.Println(player.name, "'s health has been set to", h)
+	fmt.Println(player.name, "'s health has been set to", player.health)
 }
 
-func (player *Player) setEnergy(energy int) {
-	e := 0
-	if energy < 0 {
-		e = 0
-	} else if energy > player.maxEnergy {
-		e = player.maxEnergy
+func (player *Player) setEnergy(energy uint) {
+	if energy > player.maxEnergy {
+		player.energy = player.maxEnergy
 	} else {
-		e = energy
+		player.energy = energy
 	}
-	player.energy = e
-	fmt.Println(player.name, "'s energy has been set to", e)
+	fmt.Println(player.name, "'s energy has been set to", player.energy)
 }
 
 func main() {
