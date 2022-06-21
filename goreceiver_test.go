@@ -1,15 +1,11 @@
 /*
-Summary:
-Copy your rcv-func solution to this directory and write unit tests.
-
 Requirements:
 Write unit tests that ensure:
-- Health & energy can not go above their maximums
-- Health & energy can not go below 0
+- Health & energy cannot go above their maximums
+- Health & energy are set correctly
 
-If any of your  tests fail, make the necessary corrections
-in the copy of your solution file.
-
+If any of your tests fail, make the necessary corrections
+in the copy of your solution file
 */
 
 package main
